@@ -1,0 +1,242 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Deep Studio{% endblock title %}
+{% block content %}
+
+    <div class="container-fluid mt-5">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="{% static 'img/car.jpg' %}" alt="First slide" height="620">
+                    <div class="carousel-caption d-none d-md-block text-white">
+                        <h5>Love and fun alway together</h5>
+                        <p>Photography is a way of feeling, of touching, of loving. What you have caught on film is
+                            captured forever…
+                            It remembers little things, long after you have forgotten everything.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="{% static 'img/car5.jpg' %}" alt="Second slide" height="620">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Modern wedding stories</h5>
+                        <p>May your wedding day and every day afterward be filled with love, joy and happiness.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="{% static 'img/car2.jpg' %}" alt="Third slide" height="620">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>The photograph must contain, the humanity of the moment.</h5>
+                        <p>Taking an image, freezing a moment, reveals how rich reality truly is.</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        {#Slider end here.....................................    #}
+
+        <div class="container-fluid mt-3">
+            <div class="row my-5">
+                <div class="col-md-4 man">
+
+                    <img src="{% static 'img/man2.gif' %}" alt="Man">
+
+                    <h1 class="text-capitalize text-center text_effect" style="line-height:250px">Why hire us?</h1>
+
+                </div>
+                <div class="col-md-8 ml-auto">
+                    <hr>
+                    <ol class="text-capitalize mx-3 font-weight-bold">
+                        {% for i in hire %}
+                            <li>{{ i.reason1 }}</li>
+                            <li>{{ i.reason2 }}</li>
+                            <li>{{ i.reason3 }}</li>
+                            <li>{{ i.reason4 }}</li>
+                            <li>{{ i.reason5 }}</li>
+                            <li>{{ i.reason6 }}</li>
+                            <li>{{ i.reason7 }}</li>
+                        {% endfor %}
+                    </ol>
+                    <p>
+                        To know about our wedding photography packages, <a href="/ContactUs">simply click here</a> or
+                        call us at
+                        <span>(7908346040 / 9832012597)</span>
+                    </p>
+                    <p>
+                        Go ahead and explore the <strong>DeepPhotographyStudio</strong> and wedding films by India’s best wedding
+                        photographers.
+                        We are sure that you will fall in love with our work and will be compelled to call us the best
+                        wedding photographers.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        {#    why hire us end here#}
+
+        <div class="container-fluid pb-3">
+            <div class="row">
+                <div class="col-md-12 text-center text-capitalize text-white"
+                     style="background-color: burlywood; border-radius:100px">
+                    <p><strong>Love our work & hire us for your wedding!!</strong></p>
+                    <p>
+                        <a href="/ContactUs" class="text-danger"><strong>Click here to get started</strong></a>
+                    </p>
+
+
+                </div>
+
+            </div>
+        </div>
+
+        {#    Get started end here#}
+
+        <div class="container-fluid pb-3">
+            <div class="container text-center">
+                <h4 class="text-uppercase text_effect ">THE NEW AGE OF WEDDING PHOTOGRAPHY</h4>
+                <p class="text-justify "><strong>We believe wedding photography should be fun, timeless and
+                    inspirational.
+                    We are a boutique Indian wedding photography studio that is best known for our unique style of
+                    wedding photography for the modern couple. We look forward to being a part of your story!
+                </strong></p>
+            </div>
+            <h4 class="text-capitalize text-center pb-3 my-5 text_effect">WEDDING PHOTOGRAPHY SHOWCASE</h4>
+
+            <div class="container-fluid pb-5">
+                <div class="row">
+                    {% for i in photo %}
+                        <div class="col-md-4 pb-2 bg-dark">
+                            <div class="card">
+                                <img class="card-img-top img-fluid" src="{{ i.image.url }}" alt="Card image cap"style="border-radius:50px">
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                </div>
+            <div class="row">
+                <div class="col-md-1 mx-auto">
+                        <button type="button" class="btn btn-primary my-3" style="border-radius: 25px"><a
+                            href="/photography" class="text-white" style="text-decoration: none; font-size: 20px;">See
+                        more</a></button>
+
+                    </div>
+
+            </div>
+
+        </div>
+    <hr>
+
+        <div class="container-fluid">
+            <h3 class="text-center text-capitalize">Video clips Demo</h3>
+            <div class="row bg-white">
+                {% for v in video %}
+                    <div class="col-md-5 py-2 bg-dark my-2 mx-auto" style="border-radius: 50px">
+                        <video controls preload="auto"  width='100%' height='450px' class="mx-auto">
+                            <source src="{{ v.clip.url }}" type="video/mp4"></source>
+                        </video>
+                    </div>
+                {% endfor %}
+            </div>
+         <div class="row">
+                <div class="col-md-1 mx-auto">
+                        <button type="button" class="btn btn-primary my-3" style="border-radius: 25px"><a
+                            href="/cinema1" class="text-white" style="text-decoration: none; font-size: 20px;">See
+                        more</a></button>
+
+                    </div>
+
+            </div>
+        </div>
+    </div>
+    {#    photos end here#}
+
+    <div class="container-fluid pb-5">
+        <hr>
+        <div class="row" style="background-color: whitesmoke">
+            <div class="col-md-4 text-center text-capitalize">
+                <hr class="bg-warning" style="height: 4px;">
+                <h1 class="text_effect">Services</h1>
+
+            </div>
+            <div class="col-md-8 my-5">
+                <p class="text-justify text-center">
+                    Our primary service offerings are deepstudio wedding photography, deepstudio wedding cinematography,
+                    photo album designing and printing services and video and photo post production. Apart from
+                    these, even the
+                    traditional photography,event photography and traditional videography services can be provided
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="container-fluid pb-5" style="background-color: whitesmoke">
+        <div class="row  text-capitalize text-gray-dark">
+            <div class="col-md-4 my-3 text_effect" >
+
+                <i class="fa fa-camera my-5" style="color: burlywood;font-size:35px">&nbsp; &nbsp; &nbsp;
+                    Photography</i>
+                <p>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbspDeepStudio weeding
+                    photography</p>
+            </div>
+            <div class="col-md-4 my-3  text_effect">
+
+                <i class="fa fa-video-camera my-5" style="color: burlywood;font-size:35px">&nbsp; &nbsp; &nbsp;Cinematography</i>
+                <p>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Wedding films</p>
+
+            </div>
+            <div class="col-md-4 my-3  text_effect">
+
+                <li class="fa fa-book my-5" style="color: burlywood;font-size:35px">&nbsp; &nbsp; &nbsp;Photo
+                    books/albums
+                </li>
+                <p>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;customized designer photo
+                    albums</p>
+
+            </div>
+            <div class="col-md-4 my-3  text_effect">
+                <li class="fa fa-photo my-5" style="color: burlywood;font-size:35px">&nbsp; &nbsp; &nbsp;Event shot</li>
+                <p>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;event photography and
+                    videos</p>
+            </div>
+            <div class="col-md-4 my-3  text_effect">
+                <li class="fa fa-product-hunt my-5" style="color: burlywood;font-size:35px">&nbsp; &nbsp; &nbsp;post-production</li>
+                <p>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Video & photos post
+                    production</p>
+            </div>
+            <div class="col-md-4  my-3  text_effect">
+                <li class="fa fa-camera-retro my-5" style="color: burlywood;font-size:35px">&nbsp; &nbsp; &nbsp;couple
+                    shot
+                </li>
+                <p>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;outdoor photography &
+                    films</p>
+            </div>
+
+
+        </div>
+
+    </div>
+    </div>
+
+
+{% endblock content %}
+
+

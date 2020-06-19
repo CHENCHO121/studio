@@ -1,0 +1,35 @@
+{% extends  'base.html'%}
+{% load static %}
+
+{% block content %}
+    <br><br>
+    <div class="container-fluid pb-5 my-5">
+        <div class="row bg-white">
+            <div class="col-md-4">
+                 <hr class="bg-warning aligned-center" style="height: 4px;">
+                <h3 class="text-uppercase text_effect text-center">wedding cinema</h3>
+            </div>
+            <div class="col-md-8 text-center font-weight-bold my-4">
+                <p>
+                    Welcome to the world of Wedding Cinema.<br>
+                    Welcome to the world of exquisiteness, extravagance,<br>
+                    excitement, admiration, emotions, passion and life!
+                </p>
+                <p>
+                    We believe that a wedding is a journey of not only the person getting married but also of all those
+                    people who are attached to him or her in some way or the other and of all those who helped him/her in becoming who he or she is.
+                </p>
+
+            </div>
+             {% for v in video %}
+                    <div class="col-md-8 py-2 my-2 ml-auto ">
+                        <video controls preload="auto"  width='100%' height='450px'>
+                            <source src="{{ v.clip.url }}" type="video/mp4"></source>
+                        </video>
+                    </div>
+                {% endfor %}
+            </div>
+
+
+    </div>
+{% endblock content %}
