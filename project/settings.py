@@ -30,7 +30,7 @@ SECRET_KEY = 'd5f=a)ypswr7k3_o%k&#fs1_sfg@&i1sf@i7d4)n$k297qqf6!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['cgstudio.herokuapp.com','https://cgstudio.herokuapp.com']
+ALLOWED_HOSTS = ['*','herokuapp.com']
 
 
 # Application definition
@@ -41,8 +41,11 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'cloudinary_storage',
     'django.contrib.staticfiles',
     'studio',
+    'cloudinary',
+
 ]
 
 MIDDLEWARE = [
@@ -89,8 +92,7 @@ DATABASES = {
     }
 }
 
-db_from_env = dj_database_url.config()
-DATABASES['default'].update(db_from_env)
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -125,6 +127,15 @@ USE_L10N = True
 USE_TZ = True
 
 
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'hbdps8idi',
+    'API_KEY': '819197358621795',
+    'API_SECRET': 'qAZvzWUqTO1JCp__e8zz_1VHLmo',
+}
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
@@ -136,7 +147,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, "live-static-files", 'staticfiles')
 # STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, "live-static-files", "media-root")
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, "live-static-files", "media-root")
 
 django_heroku.settings(locals())
