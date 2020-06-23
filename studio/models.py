@@ -15,22 +15,22 @@ class Contact_Us(models.Model):
 
 
 class Photography(models.Model):
-    image=models.ImageField(upload_to="Slide")
+    image=models.ImageField(upload_to="media/image")
     class Meta:
         verbose_name = 'Photography Table'
 
 
 class PhotoOnHomePage(models.Model):
-    image=models.ImageField(upload_to="Slide")
+    image=models.ImageField(upload_to="media/image")
     class Meta:
         verbose_name = 'Home Page Photo Table'
 
 class VideoOnHomePage(models.Model):
-    clip=models.FileField(upload_to='my_videos')
+    clip=models.FileField(upload_to='media/video')
 
 
 class Cinematography(models.Model):
-    clip=models.FileField(upload_to='my_videos')
+    clip=models.FileField(upload_to='media/video')
     class Meta:
         verbose_name = 'Cinematography Table'
 
@@ -48,7 +48,7 @@ class Hire_Us(models.Model):
 
 
 class Blog_video(models.Model):
-    clip = models.FileField(upload_to='my_videos')
+    clip = models.FileField(upload_to='media/video')
     name1=models.CharField(max_length=50,null=True,blank=True)
     name2 = models.CharField(max_length=50, null=True, blank=True)
     place=models.CharField(max_length=50,null=True,blank=True)
@@ -61,7 +61,7 @@ class Blog_video(models.Model):
 
 
 class Blog_Photo(models.Model):
-    image = models.ImageField(upload_to="Slide")
+    image = models.ImageField(upload_to="media/image")
     name1 = models.CharField(max_length=50, null=True, blank=True)
     name2 = models.CharField(max_length=50, null=True, blank=True)
     place = models.CharField(max_length=50, null=True, blank=True)
