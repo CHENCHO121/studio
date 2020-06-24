@@ -2,20 +2,44 @@
 {% load static %}
 {% block content %}
     <br><br>
-    <div class="container-fluid my-5 pb-5">
+    <div class="container-fluid my-5">
 
         <div class="row text-center">
-            <div class="col-md-4 text-uppercase pb-2">
+            <div class="col-md-5 text-uppercase pb-2">
                 <hr class="bg-warning aligned-center" style="height: 4px;">
-                <h3 class="text_effect ">About us</h3>
-                <img src="{% static 'img/about.jpeg' %}" alt="my image" class="img-fluid" style="border-radius: 100px">
+                <h3 class="text_effect">About us</h3>
+                <img src="{% static 'img/profile.png' %}" alt="my image" class="img-fluid" style="border-radius: 100px">
 
             </div>
-            <div class="col-md-8">
-                <p class="py-5">
-                    description
-                </p>
+            <div class="col-md-7 my-5">
+                <div class="row">
+                    <div class="col-md-12 text-justify">
+                        <p class="my-5">
+                            I am <strong>Deep chhetri</strong> grew up in siliguri, foothills of Himalaya. I own and
+                            operates a commercial photo processing studio that was featured in magazines, Ads and other
+                            news outlets, describing many extraordinary events, people and places, as an amateur
+                            photographer The transition to photojournalistic wedding photography was seamless, thanks to
+                            a natural curiosity and ability to connect to his subjects to bring out the best emotion,
+                            angle and proper lighting. At weddings, he says, "I coordinate with my staff to help capture
+                            personalities and relationship dynamics without exerting influence on the proceedings." Deep
+                            lives with his family in the beautiful mountainside of Darjeeling, India
+                        </p>
+                        <p>
+                            Our team consists of highly qualified professionals and above all they love what they do "we
+                            are a master in sophisticated software and other tools in pre and post production,
+                            to guarantee end results that will surprise and delight. That is why we love what we do; it
+                            makes people happy. Shooting style is comprehensive, utilizing the latest technology. "Every
+                            photo tells a story – this is a real story of one of the most important days in a couple’s
+                            life; and it must be documented with skill, caring and experience."
+                            At a wedding, we are in a very intimate setting where emotions run high. We're very
+                            easy; we're not directing people or trying to run the show, and so we're a calming influence
+                            on the couple, their attendants, and the guests. We welcome the day’s little surprises
+                            because those unexpected happenings often result in the most beautiful
+                        </p>
 
+                    </div>
+
+                </div>
             </div>
         </div>
 
@@ -23,22 +47,21 @@
     {#    Team.....................#}
     <div class="container-fluid pb-5 my-5">
         <div class="row">
-            <div class="col-md-4 text-center">
+            <div class="col-md-2 text-center">
                 <hr class="bg-warning aligned-center" style="height: 4px;">
                 <h3 class="text_effect text-uppercase">our team</h3>
             </div>
-
-
-            <div class="col-md-8 pb-2 ml-auto">
-                <div class="card my-5">
-                    <img class="card-img-top img-fluid" src="{% static 'img/d3.jpg' %}" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title text-center font-weight-bold">Chencho</h5>
-                        <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                    </div>
+            <div class="col-md-5 pb-2 ml-auto">
+                <div class="my-5">
+                    <img class="card-img-top  img-fluid" src="{% static 'img/t1.jpg' %}" alt="Card image cap" style="border-radius: 400px">
                 </div>
             </div>
+            <div class="col-md-5 pb-2 ml-auto">
+                <div class="my-5">
+                    <img class="card-img-top img-fluid" src="{% static 'img/t2.jpg' %}" alt="Card image cap" style="border-radius: 400px">
+                </div>
+            </div>
+
 
 
         </div>

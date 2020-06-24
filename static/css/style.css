@@ -33,8 +33,6 @@
 }
 
 .text_effect{
-    color:red;
-    text-shadow: 3px 4px 1px yellow;
     transition:transform 1s;
 }
 
