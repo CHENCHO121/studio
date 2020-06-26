@@ -8,26 +8,27 @@
 {% block content %}
     <br><br>
     <div class="container-fluid text-capitalize my-5 text-center">
-    <h3 class="pb-5 text_effect">THE new evolution OF WEDDING PHOTOGRAPHY</h3>
-    <p>
-        I believe wedding photography should be fun, timeless and inspirational.
-    </p>
-    <p> I am  a boutique
-        Indian wedding photography studio that is best known for our unique style of wedding photography
-        for the modern couple.
-    </p>
-    <p class="pb-5"> I look forward to being a part of your story!</p>
+        <h3 class="pb-5 text_effect">THE new evolution OF WEDDING PHOTOGRAPHY</h3>
+        <p>
+            I believe wedding photography should be fun, timeless and inspirational.
+        </p>
+        <p> I am a boutique
+            Indian wedding photography studio that is best known for our unique style of wedding photography
+            for the modern couple.
+        </p>
+        <p class="pb-5"> I look forward to being a part of your story!</p>
 
     </div>
     </div>
     <div class="container-fluid pb-5">
         <div class="row">
             {% for i in photos %}
-            <div class="col-md-4 pb-2 bg-dark">
-                <div class="card">
-                    <img class="card-img-top img-fluid" src="{{ i.image.url }}" alt="Card image cap"  style="border-radius:50px">
+                <div class="col-md-4 pb-2 bg-dark">
+                    <div class="card">
+                        <img class="card-img-top img-fluid" src="{{ i.image.url }}" alt="Card image cap"
+                             style="border-radius:50px">
+                    </div>
                 </div>
-            </div>
             {% endfor %}
         </div>
 
