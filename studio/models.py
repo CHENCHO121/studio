@@ -49,26 +49,26 @@ class Hire_Us(models.Model):
 
 class Blog_video(models.Model):
     clip = models.FileField(upload_to='media/video')
-    name1=models.CharField(max_length=50,null=True,blank=True)
-    name2 = models.CharField(max_length=50, null=True, blank=True)
+    Bride_Name=models.CharField(max_length=50,null=True,blank=True)
+    Groom_Name = models.CharField(max_length=50, null=True, blank=True)
     place=models.CharField(max_length=50,null=True,blank=True)
     description=models.TextField(max_length=500,null=True,blank=True)
 
     def __str__(self):
-        return self.name1
+        return self.Groom_Name
     class Meta:
         verbose_name = 'Blog Video Table'
 
 
 class Blog_Photo(models.Model):
     image = models.ImageField(upload_to="media/image")
-    name1 = models.CharField(max_length=50, null=True, blank=True)
-    name2 = models.CharField(max_length=50, null=True, blank=True)
+    Bride_Name = models.CharField(max_length=50, null=True, blank=True)
+    Groom_Name = models.CharField(max_length=50, null=True, blank=True)
     place = models.CharField(max_length=50, null=True, blank=True)
     description = models.TextField(max_length=500, null=True, blank=True)
 
     def __str__(self):
-        return self.name1
+        return self.Groom_Name
     class Meta:
         verbose_name = 'Blog Photo Table'
 

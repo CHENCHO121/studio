@@ -25,16 +25,14 @@ class AdminCinematography(admin.ModelAdmin):
     list_display = ('clip',)
 
 class AdminBlogPhoto(admin.ModelAdmin):
-    list_display = ('image','name1','name2','place','description')
-    list_filter = ('place', 'name1', 'image')
-    search_fields = ('place', 'clip', 'name1')
-    list_editable = ('name1', 'name2', 'place')
+    list_display = ('image','Bride_Name','Groom_Name','place','description')
+    list_filter = ('place', 'Bride_Name', 'image')
+    search_fields = ('place', 'clip', 'Bride_Name')
 
 class AdminBlogVideo(admin.ModelAdmin):
-    list_display = ('clip','name1','name2','place','description')
-    list_filter = ('place','name1','clip')
-    search_fields = ('place','clip','name1')
-    list_editable = ('name1','name2','place')
+    list_display = ('clip','Bride_Name','Groom_Name','place','description')
+    list_filter = ('place','Bride_Name','clip')
+    search_fields = ('place','clip','Bride_Name')
 
 
 admin.site.register(Contact_Us,AdminContact)
